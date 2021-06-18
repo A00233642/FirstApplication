@@ -1,0 +1,30 @@
+﻿@page
+@model FirstApplication.Pages.introModel
+@{
+    ViewData["Title"] = "MyApp";
+}
+
+
+<div>
+    <h3>My Name Is Taiwo</h3>
+</div>
+
+
+@section Text{
+    <div>
+        <p>Welcome to WEB 1001 Assignment tee<p>
+
+    </div>
+}
+
+
+<form method="get">
+    <input name="firstValue" type="number" step="1" value="@Model.firstValue" />
+    <input name="secondValue" type="number" step="1" value="@Model.secondValue" />
+    <input name="submit" type="submit" />
+</form>
+
+@if (Model.Resultset == true)
+{
+    <div class="answe">Answer is: <output>@Model.nResult</output></div>
+}
